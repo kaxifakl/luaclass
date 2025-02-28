@@ -24,7 +24,10 @@ function class(parent)
             setmetatable(instance, {
                 __index = self
             })
-            instance:ctor(...);
+            -- instance.ctor判空
+            if instance.ctor then
+                instance:ctor(...)
+            end
             return instance;
         end
     })

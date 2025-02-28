@@ -33,3 +33,9 @@ local p2 = Point2(13);
 print(p2.x, p2.y, p2.z);
 
 -- 10 20 30
+
+noParent = class({
+    num = 1
+})
+
+noParent()
